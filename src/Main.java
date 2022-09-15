@@ -12,16 +12,22 @@ public class Main {
         wpisane = (List<Integer>) wpisanieliczb();
         System.out.println("Wpisane " + wpisane);
 
-        //zapis listy która będzie zawierałą elementy które powtarzają się w wpisane 1 wylosowane
+        List<Integer> trafione = new LinkedList<>();
+        trafione = podsumowanie(wylosowane, wpisane);
+        System.out.println("Trafione " + trafione);
+        }
 
+    public static List<Integer> podsumowanie(Set<Integer> wylosowane, List<Integer> wpisane){
         List<Integer> trafione = new LinkedList<>();
         for(Integer wpisanawartosc : wpisane){
             if(wylosowane.contains(wpisanawartosc)){
                 trafione.add(wpisanawartosc);
             }
         }
-        System.out.println("Trafione " + trafione);
-        }
+        return trafione;
+    }
+
+
         public static Set<Integer> losowanieliczb(int n){
         Set<Integer> wylosowane = new HashSet<>();
             while(wylosowane.size() < n) {
@@ -46,4 +52,6 @@ public class Main {
             }
             return (Set<Integer>) wpisane;
         }
+
+
 }
