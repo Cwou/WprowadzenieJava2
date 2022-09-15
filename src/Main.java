@@ -1,5 +1,4 @@
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -15,5 +14,14 @@ public class Main {
             wylosowane.add((int)(Math.random()*10));
         }
         System.out.println("Wylosowano: " + wylosowane);
+        // wczytywanie z klawiatury 6 liczb
+        Scanner klawiatura = new Scanner(System.in);
+        List<Integer> wpisane = new ArrayList<>();
+        System.out.println("Podaj 6 liczb");
+        for(int i = 0; i < 6; i++){
+            System.out.println("Liczba " + i);
+            wpisane.add(klawiatura.nextInt());
+        }
+        System.out.println("Wpisane " + wpisane);
         }
 }
