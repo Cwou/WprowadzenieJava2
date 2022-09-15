@@ -11,7 +11,7 @@ public class Main {
         // w zbiorze elementy nie są indexowane (nie można wyznaczyć 4 elementu tablicy)
 
         Set<Integer> wylosowane = new HashSet<>();
-        for(int i = 0; i < 6; i++) {
+        while(wylosowane.size() < 6) {
             wylosowane.add((int)(Math.random()*10));
         }
         System.out.println("Wylosowano: " + wylosowane);
