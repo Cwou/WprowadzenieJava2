@@ -20,7 +20,12 @@ public class Main {
         System.out.println("Podaj 6 liczb");
         for(int i = 0; i < 6; i++){
             System.out.println("Liczba " + i);
-            wpisane.add(klawiatura.nextInt());
+            int wczytanawart = klawiatura.nextInt();
+            while(wpisane.contains(wczytanawart)){
+                System.out.println("Taka liczba już została podana");
+                wczytanawart = klawiatura.nextInt();
+            }
+            wpisane.add(wczytanawart);
         }
         System.out.println("Wpisane " + wpisane);
         }
